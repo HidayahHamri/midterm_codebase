@@ -10,7 +10,7 @@ class SecondScreen extends StatelessWidget {
       appBar: AppBar(
         leading: Container(),
         centerTitle: true,
-        title: Text('App Bar Title'),
+        title: Text('Edit Note'),
         actions: [
           IconButton(
               icon: Icon(
