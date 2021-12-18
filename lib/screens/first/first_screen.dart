@@ -3,8 +3,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:midterm/screens/second/second_screen.dart';
+import 'package:midterm/models/mock_data.dart';
+import 'package:midterm/models/note.dart';
 
 class FirstScreen extends StatefulWidget {
+  FirstScreen(this.note);
+  final Note note;
   @override
   _FirstScreenState createState() => _FirstScreenState();
 }
@@ -53,13 +57,13 @@ class _FirstScreenState extends State<FirstScreen> {
                     Icons.delete,
                     color: Colors.blue,
                   ),
-                  onPressed: () {},
+                  onPressed: () => removeTitles(index),
                 ),
               ],
             ),
           ),
-          title: Text('Note title'),
-          subtitle: Text('Note content'),
+          title: Text(widget.note.title[index]),
+          subtitle: Text(widget.note.content[index]),
           onTap: () {},
           onLongPress: () {},
         ),
@@ -77,10 +81,16 @@ class _FirstScreenState extends State<FirstScreen> {
           FloatingActionButton(
             child: Icon(Icons.add),
             tooltip: 'Add a new note',
-            onPressed: () {},
+            onPressed: () {
+              SecondScreen.push(context);
+            },
           ),
         ],
       ),
     );
+  }
+
+  void removeTitles(int index) {
+    //final title = _titles.removeAt(index);
   }
 }
