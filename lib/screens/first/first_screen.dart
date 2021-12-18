@@ -2,6 +2,7 @@
 //! Parts of the code have been given. Complete the remaining.
 
 import 'package:flutter/material.dart';
+import 'package:midterm/screens/second/second_screen.dart';
 
 class FirstScreen extends StatefulWidget {
   @override
@@ -40,7 +41,12 @@ class _FirstScreenState extends State<FirstScreen> {
               children: [
                 IconButton(
                   icon: Icon(Icons.edit, color: Colors.blue),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SecondScreen()),
+                    );
+                  },
                 ),
                 IconButton(
                   icon: Icon(
