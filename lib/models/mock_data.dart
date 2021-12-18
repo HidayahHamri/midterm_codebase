@@ -3,8 +3,13 @@
 import 'note.dart';
 
 final mockNoteList = <Note>[
-  // Note(title: "Apa Khabar", content: "Khabar baik" )
+//List<Note> mockNoteList = [
+  Note("MAP", "Mobile Appication Programming"),
+  Note("SAD", "System Analysis Design"),
+  Note("AD", "Analysis Design"),
+  Note("DS", "Data Structure"),
 ];
+
 
 // List<Note> mockNoteList =[
 
