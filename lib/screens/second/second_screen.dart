@@ -57,4 +57,6 @@ class SecondScreen extends StatelessWidget {
       ),
     );
   }
+
+  static void push(BuildContext context) {}
 }
