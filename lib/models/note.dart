@@ -3,14 +3,17 @@
 class Note {
   String title;
   String content;
-  List<Note> _titles;
+  //int notes;
+  List<Note> notes;
+
+  bool add;
 
   Note(this.title, this.content);
 
   double get progress {
     int add = 0;
-    for (int i = 0; i < _titles.length; i++) {
-      if (note[i].add) {
+    for (int i = 0; i < notes.length; i++) {
+      if (notes[i].add) {
         add = add + 1;
       }
     }
@@ -18,7 +21,7 @@ class Note {
   }
 
   //get title => _titles;
-  get note => note;
+  //get note => note;
 
   // Note({note, String title, String content}) : _note = note;
 
