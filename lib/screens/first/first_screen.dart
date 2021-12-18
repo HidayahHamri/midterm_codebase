@@ -8,7 +8,7 @@ import 'package:midterm/models/note.dart';
 
 class FirstScreen extends StatefulWidget {
   FirstScreen(this.note);
-  final Note note;
+  final List<Note> note;
   @override
   _FirstScreenState createState() => _FirstScreenState();
 }
@@ -62,8 +62,8 @@ class _FirstScreenState extends State<FirstScreen> {
               ],
             ),
           ),
-          title: Text(widget.note.title[index]),
-          subtitle: Text(widget.note.content[index]),
+          title: Text(widget.note[index].title),
+          subtitle: Text(widget.note[index].content),
           onTap: () {},
           onLongPress: () {},
         ),
