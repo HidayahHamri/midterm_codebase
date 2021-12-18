@@ -33,7 +33,7 @@ class _FirstScreenState extends State<FirstScreen> {
         ],
       ),
       body: ListView.separated(
-        itemCount: 4,
+        itemCount: widget.note.length,
         separatorBuilder: (context, index) => Divider(
           color: Colors.blueGrey,
         ),
@@ -82,7 +82,10 @@ class _FirstScreenState extends State<FirstScreen> {
             child: Icon(Icons.add),
             tooltip: 'Add a new note',
             onPressed: () {
-              SecondScreen.push(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SecondScreen()),
+              );
             },
           ),
         ],
@@ -92,5 +95,6 @@ class _FirstScreenState extends State<FirstScreen> {
 
   void removeTitles(int index) {
     //final title = _titles.removeAt(index);
+    widget.note.removeAt(index);
   }
 }
