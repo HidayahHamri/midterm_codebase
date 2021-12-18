@@ -1,12 +1,11 @@
 //! Define the model class here
 
 class Note {
-  String _title;
-  String _content;
+  String title;
+  String content;
   List<Note> _titles;
 
-  String get title => _title;
-  String get content => _content;
+  Note(this.title, this.content);
 
   double get progress {
     int add = 0;
@@ -15,13 +14,13 @@ class Note {
         add = add + 1;
       }
     }
-    return (add + 1);
+    return (progress);
   }
 
   //get title => _titles;
-  get note => _note;
+  get note => note;
 
-  Note({note}) : _note = note;
+  // Note({note, String title, String content}) : _note = note;
 
-  Note.copy(Note from) : this(title: from._title, content: [...from._content]);
+  // Note.copy(Note from) : this(title: from._title, content: [...from._content]);
 }
