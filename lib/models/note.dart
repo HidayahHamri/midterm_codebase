@@ -23,7 +23,7 @@ class Note {
   //get title => _titles;
   //get note => note;
 
-  // Note({note, String title, String content}) : _note = note;
+  //Note({ note String title, String content})
 
-  // Note.copy(Note from) : this(title: from._title, content: [...from._content]);
+  Note.copy(Note from) : this(from.title, from.content);
 }
